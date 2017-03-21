@@ -4,21 +4,25 @@ public class TimeAdder{
 	public static void main(String[] args) {
 
 		int runMin = minuteAdd(4,3,5,3,3,2);
-		int runSecs = secondsAdd(5,3,2,5,6);
+		int runSecs = secondsAdd(56,3,2,5,6);
+		int secsMod;
+		int secsDiv;
 
-		System.out.println(runMin); 
-		System.out.println(runSecs);
+		System.out.printf("The total minutes: %d%n",runMin); 
+		System.out.printf("The total seconds: %d%n",runSecs);
 
 		if (runSecs < 59) {
-			int secsDiv = 0;
-			int secsMod = runSecs;
-			System.out.printf("%d : %d%n",secsDiv, secsMod);
+			secsDiv = 0;
+			secsMod = runSecs;
+			System.out.printf("%d min : %d secs %n",(secsDiv+runMin), secsMod);
 		}
 		else{
-			int secsDiv = runSecs / 60;
-			int secsMod = runSecs % 60;
-			System.out.printf("%d : %d %n",secsDiv,secsMod);
+			secsDiv = runSecs / 60;
+			secsMod = runSecs % 60;
+			System.out.printf("%d min : %d secs %n",(secsDiv+runMin),secsMod);
 		}
+
+		//System.out.printf("%d : %d %n",(secsDiv+runMin),secsMod);
 	}
 
 
@@ -46,5 +50,4 @@ public class TimeAdder{
 		}
 		return seconds;
 	}
-
 }
