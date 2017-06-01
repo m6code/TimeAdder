@@ -7,8 +7,8 @@
 public class TimeAdder{
 	public static void main(String[] args) {
 
-		int runMin = minuteAdd(4,3,4,3,3); // Receives the minutes arguments
-		int runSecs = secondsAdd(7,14,6,54,29); // Receives the seconds arguments
+		int runMin = minuteAdd(1,8,20,2,14,4,1); // Receives the minutes arguments
+		int runSecs = secondsAdd(38,20,50,57,21,43,26); // Receives the seconds arguments
 
 		System.out.printf("The total minutes: %d%n",runMin); 
 		System.out.printf("The total seconds: %d%n",runSecs);
@@ -33,7 +33,8 @@ public class TimeAdder{
 
 	/**
 	 * Add the unknown number minutes entered
-	 * return the total minute
+	 * @param mins number of minutes
+	 * @return the total minute
 	 */
 	private static int minuteAdd(int...mins){
 		int minute = 0;
@@ -46,7 +47,8 @@ public class TimeAdder{
 
 	/**
 	 * Add the number of unknown seconds entered
-	 * return the total seconds
+	 * @param secs the number of seconds to calculute
+	 * @return the total seconds
 	 */
 	private static int secondsAdd(int...secs){
 		int seconds = 0;
